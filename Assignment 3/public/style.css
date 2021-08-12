@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+h2 {
+  text-align: center;
+  font: 50px;
+}
+
+nav {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+  }
+
+nav a {
+  color: #00B7FF;
+  text-decoration: none;
+  margin: 0 20px 20px 0;
+  text-align: center;
+}
+
+form{
+  display: inline;
+}
+
+table{
+  border:1px solid black;
+}
+.row-header{
+  background: #eaa8f7;
+}
+td, tr{
+  padding: 6px 12px;
+  text-align:left;
+  background-color:  #eaa8f7;;
+ 
+}

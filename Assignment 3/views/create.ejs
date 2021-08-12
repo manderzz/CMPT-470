@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main page</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<nav>
+  <a href= "/" >Home </a>
+  <a href= "/create" >Create</a>
+  <a href= "/delete" >Delete/Edit</a>
+</nav>
+<h3>There are currently <%= total.result[0].count%> rectangle(s) in the database</h3>
+<body>
+  <form method = "POST" action = "/create_new">
+    <ul>
+      <input type="number" id="width" name="width" placeholder="Width" required>  <br>
+      <input type="number" id="length" name="length" placeholder="Length" required>  <br>
+      <input type="text" id="colour" name="colour" placeholder="Colour" required> <br>
+      <input type="text" id="name" name="unique_name" placeholder="Name" required>   <br>
+      <input type="number" id="power" name="power" placeholder="Power level" required>  <br>
+      <input type="submit"> 
+    </ul>
+  </form>
+
+  
+</body>
+</html>

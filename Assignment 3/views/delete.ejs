@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main page</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<nav>
+  <a href= "/" >Home </a>
+  <a href= "/create" >Create</a>
+  <a href= "/delete" >Delete/Edit</a>
+</nav>
+<h3>These are the current rectangles in the database</h3>
+<body>
+  <ul>
+    <% result.forEach(function(r){  %>
+        <li> Id:<%= r.id %> Width:<%= r.width %> Length:<%= r.length %> Colour:<%= r.colour %> Name:<%= r.name %> Power:<%= r.power %>
+          <button id ="button1" onclick = "DeleteRectangle('<%= JSON.stringify(r.id) %>', this)"> DELETE </button>
+          <button id = "button2" onclick = "location.href = '/edit' + '<%= JSON.stringify(r.id) %>' " > EDIT </button> 
+        </li>
+
+        <% }); %>
+      
+  </ul>
+  <script src="jquery.min.js"></script>
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
